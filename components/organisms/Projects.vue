@@ -36,5 +36,8 @@
     margin-top: 7rem;
     color: white;
   }
+  @include screen("small") {
+    margin: 3rem;
+  }
 }
 </style>

@@ -15,5 +15,8 @@
   h2 {
     font-size: 3.125rem;
   }
+  @include screen("small") {
+      padding: 0 2rem 5rem 2rem;
+  }
 }
 </style>
