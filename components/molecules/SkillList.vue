@@ -12,6 +12,8 @@
     <Skill text="Adonis v5" />
     <Skill text="MySQL" />
     <Skill text="Docker" />
+    <Skill text="Japa" />
+    <Skill text="Jest" />
   </div>
 </template>
 

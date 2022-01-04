@@ -3,7 +3,7 @@
     <div class="presentation-text">
       <h1>José Anselmo</h1>
       <p>Desenvolvedor fullstack</p>
-      <div href="#about-me" class="about-me">Sobre mim</div>
+      <a href="#about-me" class="about-me">Sobre mim</a>
     </div>
     <Socials />
   </section>
@@ -30,6 +30,8 @@
     width: 12.5rem;
     height: 3.75rem;
     background: color("primary");
+    color: white;
+    text-decoration: none;
     display: grid;
     align-items: center;
     justify-items: center;
