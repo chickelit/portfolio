@@ -14,6 +14,9 @@
     <Skill text="Docker" />
     <Skill text="Japa" />
     <Skill text="Jest" />
+    <Skill text="Express" />
+    <Skill text="Sequelize" />
+    <Skill text="JWT" />
   </div>
 </template>
 

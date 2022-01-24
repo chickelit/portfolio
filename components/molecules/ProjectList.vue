@@ -12,7 +12,7 @@
             <div class="ring"></div>
           </div>
           <div class="project-content">
-            <h3>ChatAPI</h3>
+            <h3>Chat API</h3>
             <p>
               API de conversas em tempo real, feita com Adonis v5, MySQL e
               Typescript.
@@ -39,9 +39,10 @@
             <div class="ring"></div>
           </div>
           <div class="project-content">
-            <h3>ChatApp</h3>
+            <h3>Chat App</h3>
             <p>
-              Client para a API de conversas em tempo real, feito com Nuxt, Vue e Typescript
+              Client para a API de conversas em tempo real, feito com Nuxt, Vue
+              e Typescript
             </p>
           </div>
           <hr />
@@ -53,27 +54,53 @@
         </div>
       </div>
     </div>
+    <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/express-app-project.jpeg"
+              :alt="`Imagem do projeto ExpressApp`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Express App</h3>
+            <p>Padrão de API Express com Sequelize, JWT, MySQL e Typescript.</p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/ExpressApp" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .project-card {
-  height: 32rem;
+  height: 34rem;
   width: 100%;
   box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.8);
   display: grid;
   align-items: center;
   .wrapper {
-    height: max-content;
+    margin: 0 1rem;
+    height: 85%;
     display: grid;
-    grid-auto-rows: max-content;
+    grid-template-rows: max-content 1fr max-content;
     hr {
       width: 80%;
     }
     .project-content {
-      padding: 0 1.5rem;
+      padding: 0;
       display: grid;
       justify-items: center;
+      align-content: center;
       h3 {
         margin-bottom: 0;
         font-size: 1.75rem;
@@ -84,8 +111,8 @@
     }
     .project-cover {
       position: relative;
-      width: 80%;
-      max-width: 18rem;
+      width: 100%;
+      max-width: 14rem;
       aspect-ratio: 1 / 1;
       border-radius: 100%;
       justify-self: center;
@@ -112,7 +139,7 @@
         }
       }
       img {
-        max-width: 18rem;
+        max-width: 16rem;
         width: 76%;
         aspect-ratio: 1 / 1;
         border-radius: 100%;
