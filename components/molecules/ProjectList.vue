@@ -78,6 +78,30 @@
         </div>
       </div>
     </div>
+     <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/todo-api-project.jpeg"
+              :alt="`Imagem do projeto TodoAPI`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Todo API</h3>
+            <p>API de todos com Express, Sequelize, JWT, MySQL e Typescript.</p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/TodoApp" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
