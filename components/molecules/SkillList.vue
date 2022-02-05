@@ -17,6 +17,7 @@
     <Skill text="Express" />
     <Skill text="Sequelize" />
     <Skill text="JWT" />
+    <Skill text="Socket.io" />
   </div>
 </template>
 

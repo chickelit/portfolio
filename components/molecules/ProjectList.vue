@@ -15,7 +15,7 @@
             <h3>Chat API</h3>
             <p>
               API de conversas em tempo real, feita com Adonis v5, MySQL e
-              Typescript.
+              Typescript. Testada com Japa.
             </p>
           </div>
           <hr />
@@ -42,7 +42,7 @@
             <h3>Chat App</h3>
             <p>
               Client para a API de conversas em tempo real, feito com Nuxt, Vue
-              e Typescript
+              e Typescript.
             </p>
           </div>
           <hr />
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-     <div class="project">
+    <div class="project">
       <div class="project-card">
         <div class="wrapper">
           <div class="project-cover">
@@ -96,6 +96,31 @@
           <hr />
           <div class="view-more">
             <a href="https://github.com/jose13162/TodoApp" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/express-chat-api-project.jpeg"
+              :alt="`Imagem do projeto Express Chat API`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Express Chat API</h3>
+            <p>API de conversas em tempo real, feita com Express, Sequelize, JWT, MySQL e
+              Typescript. Testada com Japa.</p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/ExpressChatAPI" target="__blank"
               >Ver mais...</a
             >
           </div>
