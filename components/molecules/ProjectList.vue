@@ -127,6 +127,55 @@
         </div>
       </div>
     </div>
+    <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/auth-api-project.png"
+              :alt="`Imagem do projeto Auth API`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Auth API</h3>
+            <p>API de de autenticação feita com Express, Sequelize, JWT, MySQL e
+              Typescript.</p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/AuthAPI" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/login-form-project.png"
+              :alt="`Imagem do projeto Login Form`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Login Form</h3>
+            <p>Formulário de login simples feito com HTML, CSS e JS.</p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/LoginForm" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

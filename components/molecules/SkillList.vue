@@ -18,6 +18,8 @@
     <Skill text="Sequelize" />
     <Skill text="JWT" />
     <Skill text="Socket.io" />
+    <Skill text="Webpack" />
+    <Skill text="Babel" />
   </div>
 </template>
 
