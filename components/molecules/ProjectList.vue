@@ -176,6 +176,30 @@
         </div>
       </div>
     </div>
+    <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/todo-app-project.png"
+              :alt="`Imagem do projeto Todo App`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Todo App</h3>
+            <p>Client para a API de ToDo's feito com Nuxt/Vue e Typescript.</p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/TodoApp" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -244,6 +268,7 @@
         position: absolute;
         bottom: 2rem;
         z-index: 1;
+        object-fit: cover;
       }
     }
     .view-more {
