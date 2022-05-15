@@ -12,7 +12,7 @@
             <div class="ring"></div>
           </div>
           <div class="project-content">
-            <h3>ChatApp</h3>
+            <h3>Chat App</h3>
             <p>
               WebApp de conversas em tempo, feito com Typescript, Vue, Nuxt e
               AdonisJS.
@@ -85,22 +85,24 @@
 
 <style lang="scss" scoped>
 .project-card {
-  height: 32rem;
+  height: 34rem;
   width: 100%;
   box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.8);
   display: grid;
   align-items: center;
   .wrapper {
-    height: max-content;
+    margin: 0 1rem;
+    height: 85%;
     display: grid;
-    grid-auto-rows: max-content;
+    grid-template-rows: max-content 1fr max-content;
     hr {
       width: 80%;
     }
     .project-content {
-      padding: 0 1.5rem;
+      padding: 0;
       display: grid;
       justify-items: center;
+      align-content: center;
       h3 {
         margin-bottom: 0;
         font-size: 1.75rem;
@@ -111,8 +113,8 @@
     }
     .project-cover {
       position: relative;
-      width: 80%;
-      max-width: 18rem;
+      width: 100%;
+      max-width: 14rem;
       aspect-ratio: 1 / 1;
       border-radius: 100%;
       justify-self: center;
@@ -139,7 +141,7 @@
         }
       }
       img {
-        max-width: 18rem;
+        max-width: 16rem;
         width: 76%;
         aspect-ratio: 1 / 1;
         border-radius: 100%;
