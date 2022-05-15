@@ -14,6 +14,8 @@
     <Skill text="Docker" />
     <Skill text="Japa" />
     <Skill text="Jest" />
+    <Skill text="React" />
+    <Skill text="Vite" />
   </div>
 </template>
 

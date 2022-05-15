@@ -5,22 +5,22 @@
         <div class="wrapper">
           <div class="project-cover">
             <img
-              src="@/assets/img/chat-api-project.jpeg"
-              :alt="`Imagem do projeto ChatAPI`"
+              src="@/assets/img/chat-app-project.jpeg"
+              :alt="`Imagem do projeto ChatApp`"
             />
             <div class="ring"></div>
             <div class="ring"></div>
           </div>
           <div class="project-content">
-            <h3>ChatAPI</h3>
+            <h3>ChatApp</h3>
             <p>
-              API de conversas em tempo real, feita com Adonis v5, MySQL e
-              Typescript.
+              WebApp de conversas em tempo, feito com Typescript, Vue, Nuxt e
+              AdonisJS.
             </p>
           </div>
           <hr />
           <div class="view-more">
-            <a href="https://github.com/jose13162/chatAPI" target="__blank"
+            <a href="https://github.com/jose13162/chatApp" target="__blank"
               >Ver mais...</a
             >
           </div>
@@ -32,21 +32,48 @@
         <div class="wrapper">
           <div class="project-cover">
             <img
-              src="@/assets/img/chat-app-project.jpeg"
-              :alt="`Imagem do projeto ChatApp`"
+              src="@/assets/img/todo-app-project.png"
+              :alt="`Imagem do projeto TodoApp`"
             />
             <div class="ring"></div>
             <div class="ring"></div>
           </div>
           <div class="project-content">
-            <h3>ChatApp</h3>
+            <h3>TodoApp</h3>
             <p>
-              Client para a API de conversas em tempo real, feito com Nuxt, Vue e Typescript
+              WebApp de ToDo's feito com Typescript, Vue, Nuxt, Express e
+              Sequelize.
             </p>
           </div>
           <hr />
           <div class="view-more">
-            <a href="https://github.com/jose13162/chatApp" target="__blank"
+            <a href="https://github.com/jose13162/TodoApp" target="__blank"
+              >Ver mais...</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-card">
+        <div class="wrapper">
+          <div class="project-cover">
+            <img
+              src="@/assets/img/chronometer.png"
+              :alt="`Imagem do projeto Chronometer`"
+            />
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="project-content">
+            <h3>Chronometer</h3>
+            <p>
+              Cronômetro simples feito com React + TS e Vite.
+            </p>
+          </div>
+          <hr />
+          <div class="view-more">
+            <a href="https://github.com/jose13162/Chronometer" target="__blank"
               >Ver mais...</a
             >
           </div>
@@ -119,6 +146,7 @@
         position: absolute;
         bottom: 2rem;
         z-index: 1;
+        object-fit: cover;
       }
     }
     .view-more {
