@@ -154,6 +154,27 @@ export function Projects() {
             </ViewMore>
           </DetailsWrapper>
         </Project>
+        <Project>
+          <Cover className="cover">
+            <img
+              src={"/img/themed-app-project.png"}
+              alt="Themed app project cover"
+            />
+          </Cover>
+          <DetailsWrapper className="details">
+            <h2>Themed app</h2>
+            <Description>
+              App simples com light/dark mode feito com Vite, React, Typescript e Stitches.
+            </Description>
+            <ViewMore
+              href="https://github.com/jose13162/themed-app"
+              target="_blank"
+              className="view-more"
+            >
+              Ver mais...
+            </ViewMore>
+          </DetailsWrapper>
+        </Project>
       </ProjectList>
     </section>
   );

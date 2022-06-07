@@ -42,11 +42,14 @@ export function Skills() {
         <Skill>ES6+</Skill>
         <Skill>Typescript</Skill>
         <Skill>NodeJS</Skill>
+        <Skill>SCSS</Skill>
+
         <Skill>Vue</Skill>
         <Skill>Nuxt</Skill>
         <Skill>Vite</Skill>
         <Skill>React</Skill>
-        <Skill>SCSS</Skill>
+        <Skill>Stitches</Skill>
+
         <Skill>Express</Skill>
         <Skill>Sequelize</Skill>
         <Skill>AdonisJS</Skill>
