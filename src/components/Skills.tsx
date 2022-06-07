@@ -15,15 +15,15 @@ const Title = styled.h1`
 
 const SkillList = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+  overflow-wrap: break-word;
+  text-align: center;
 `;
 
 const Skill = styled.div`
+  margin: 0.5rem;
   width: max-content;
   height: 2rem;
+  display: inline-block;
   padding: 0 1rem;
   background: #375c86;
   border-radius: 1rem;
@@ -48,6 +48,7 @@ export function Skills() {
         <Skill>Nuxt</Skill>
         <Skill>Vite</Skill>
         <Skill>React</Skill>
+        <Skill>Styled Components</Skill>
         <Skill>Stitches</Skill>
 
         <Skill>Express</Skill>
