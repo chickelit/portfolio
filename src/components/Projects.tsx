@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { projects } from "../utils/projects";
 
 const TitleWrapper = styled.div`
   width: 100%;
@@ -84,97 +85,40 @@ const ViewMore = styled.a`
 `;
 
 export function Projects() {
+  const generateKey = (function () {
+    let id = 0;
+
+    return function () {
+      return ++id;
+    };
+  })();
+
   return (
     <section id="projects">
       <TitleWrapper>
         <h1>Projetos</h1>
       </TitleWrapper>
       <ProjectList>
-        <Project>
-          <Cover className="cover">
-            <img
-              src={"/img/chat-app-project.jpeg"}
-              alt="Chat App project cover"
-            />
-          </Cover>
-          <DetailsWrapper className="details">
-            <h2>Chat App</h2>
-            <Description>
-              App de conversas em tempo real feito com Typescript, Vue, Nuxt e AdonisJS.
-            </Description>
-            <ViewMore
-              href="https://github.com/jose13162/chat-app"
-              target="_blank"
-              className="view-more"
-            >
-              Ver mais...
-            </ViewMore>
-          </DetailsWrapper>
-        </Project>
-        <Project>
-          <Cover className="cover">
-            <img
-              src={"/img/todo-app-project.png"}
-              alt="Todo App project cover"
-            />
-          </Cover>
-          <DetailsWrapper className="details">
-            <h2>Todo App</h2>
-            <Description>
-              App de ToDo's feito com Typescript, Vue, Nuxt, Express e
-              Sequelize.
-            </Description>
-            <ViewMore
-              href="https://github.com/jose13162/todo-app"
-              target="_blank"
-              className="view-more"
-            >
-              Ver mais...
-            </ViewMore>
-          </DetailsWrapper>
-        </Project>
-        <Project>
-          <Cover className="cover">
-            <img
-              src={"/img/chronometer-project.png"}
-              alt="Chronometer project cover"
-            />
-          </Cover>
-          <DetailsWrapper className="details">
-            <h2>Chronometer</h2>
-            <Description>
-              Cronômetro simples feito com Typescript, React e Vite.
-            </Description>
-            <ViewMore
-              href="https://github.com/jose13162/chronometer"
-              target="_blank"
-              className="view-more"
-            >
-              Ver mais...
-            </ViewMore>
-          </DetailsWrapper>
-        </Project>
-        <Project>
-          <Cover className="cover">
-            <img
-              src={"/img/themed-app-project.png"}
-              alt="Themed app project cover"
-            />
-          </Cover>
-          <DetailsWrapper className="details">
-            <h2>Themed app</h2>
-            <Description>
-              App simples com light/dark mode feito com Vite, React, Typescript e Stitches.
-            </Description>
-            <ViewMore
-              href="https://github.com/jose13162/themed-app"
-              target="_blank"
-              className="view-more"
-            >
-              Ver mais...
-            </ViewMore>
-          </DetailsWrapper>
-        </Project>
+        {projects.map((project) => {
+          return (
+            <Project key={generateKey()}>
+              <Cover className="cover">
+                <img src={project.cover.url} alt={project.title} />
+              </Cover>
+              <DetailsWrapper className="details">
+                <h2>{project.title}</h2>
+                <Description>{project.description}</Description>
+                <ViewMore
+                  href={project.link}
+                  target="_blank"
+                  className="view-more"
+                >
+                  Ver mais...
+                </ViewMore>
+              </DetailsWrapper>
+            </Project>
+          );
+        })}
       </ProjectList>
     </section>
   );
