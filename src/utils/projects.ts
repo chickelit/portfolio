@@ -10,18 +10,18 @@ const GITHUB_PROFILE_URL = "https://github.com/jose13162/".replace(/\/$/, "");
 
 export const projects: Project[] = [
   new Project({
-    title: "Chat App",
+    title: "Web Chat",
     description:
-      "Site de conversas em tempo real feito com Typescript, Adonis, Vue e Nuxt",
+      "Site de conversas responsivo e em tempo real feito com NodeJS, mais especificamente com AdonisJS no Backend e Vue + Nuxt no Frontend, além de ser estilizado com SCSS. Todo o código foi desenvolvido com Typescript.",
     link: `${GITHUB_PROFILE_URL}/chat-app`,
     cover: {
       url: chatAppProjectImage,
     },
   }),
   new Project({
-    title: "Todo App",
+    title: "Todo's",
     description:
-      "Site de gerenciamento de tarefas feito com Typescript, Express, Vue e Nuxt",
+      "Site de gerenciamento de tarefas feito com Typescript. Express no Backend e Vue + Nuxt no Frontend. Estilizado com SCSS.",
     link: `${GITHUB_PROFILE_URL}/todo-app`,
     cover: {
       url: todoAppProjectImage,
@@ -29,16 +29,16 @@ export const projects: Project[] = [
   }),
   new Project({
     title: "Chronometer",
-    description: "Cronômetro simples feito com Typescript, React e Vite",
+    description: "Cronômetro simples feito com Typescript e React + Vite. Estilizado com CSS puro.",
     link: `${GITHUB_PROFILE_URL}/chronometer`,
     cover: {
       url: chronometerProjectImage,
     },
   }),
   new Project({
-    title: "Themed App",
+    title: "Maratona Explorer 2",
     description:
-      "Site tematizado com temas claro e escuro feito com Typescript, React, Vite e Stitches",
+      "Site de compartilhamento de redes sociais desenvolvido durante um pequeno curso da Rocketseat. Feito com Typescript e React + Vite. Estilizado através do Stitches.",
     link: `${GITHUB_PROFILE_URL}/themed-app`,
     cover: {
       url: themedAppProjectImage,
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   new Project({
     title: "Blog",
     description:
-      "Home page para um blog feito com Typescript, React, Vite e Stitches",
+      "Home page para um blog feito com Typescript, React + Vite e Stitches",
     link: `${GITHUB_PROFILE_URL}/react-blog`,
     cover: {
       url: reactBlogProjectImage,
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   new Project({
     title: "Url Shortener",
     description:
-      "Encurtador de links feito com Typescript, Express, React e Vite",
+      "Encurtador de links feito com Typescript. Express no Backend e React + Vite no Frontend. Estilizado com CSS puro.",
     link: `${GITHUB_PROFILE_URL}/url-shortener`,
     cover: {
       url: urlShortenerProjectImage,

@@ -1,41 +1,38 @@
+import { HTMLAttributes, HTMLProps } from "react";
 import styled from "styled-components";
+import { Socials } from "./Socials";
 
 const Section = styled.section`
-  height: max-content;
-  width: 100vw;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  color: #eeeeee;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
 `;
 
 const Container = styled.div`
-  margin-left: 2.5rem;
+  color: #eeeeee;
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
+    line-height: 2rem;
   }
 
   p {
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
-  
+
   a {
-    line-height: 2.75rem;
-    height: 2.75rem;
-    width: 10rem;
-    margin-top: 0.5rem;
-    border-radius: 1.375rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    width: 9rem;
+    border-radius: 1.25rem;
     background: #375c86;
     color: #eeeeee;
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
@@ -45,67 +42,35 @@ const Container = styled.div`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 648px) {
     h1 {
-      font-size: 4rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 3.5rem;
+      font-size: 2.25rem;
+      line-height: 1.5rem;
     }
 
-    p,
-    a {
-      font-size: 1.25rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 2.75rem;
+    p {
+      font-size: 1rem;
     }
 
     a {
-      line-height: 2.2rem;
-      height: 2.2rem;
-      width: 8rem;
-    }
-
-    p,
-    a {
+      line-height: 2rem;
+      height: 2rem;
+      width: 7.5rem;
+      border-radius: 1rem;
       font-size: 1rem;
     }
   }
 `;
 
-const Socials = styled.div`
-  width: max-content;
-  height: max-content;
-  display: grid;
-`;
-
-const Social = styled.a`
-  display: grid;
-`;
-
-export function Presentation() {
+export function Presentation(props: HTMLAttributes<HTMLBaseElement>) {
   return (
-    <Section>
+    <Section {...props}>
       <Container>
         <h1>José Anselmo</h1>
         <p>Desenvolvedor fullstack</p>
         <a href="#about-me">Sobre mim</a>
       </Container>
-      <Socials>
-        <Social href="https://instagram.com/zezin_627" target="_blank">
-          <img src={"/svg/instagram.svg"} alt="Instagram icon" />
-        </Social>
-        <Social href="https://github.com/jose13162" target="_blank">
-          <img src={"/svg/github.svg"} alt="Github icon" />
-        </Social>
-      </Socials>
+      <Socials />
     </Section>
   );
 }
