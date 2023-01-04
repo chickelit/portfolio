@@ -24,17 +24,3 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
-
-@keyframes come-and-go {
-  0% {
-		left: 0;
-  }
-
-  50% {
-		left: 2rem;
-  }
-
-  100% {
-		left: 0;
-  }
-}

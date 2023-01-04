@@ -8,10 +8,10 @@ const StyledSocials = styled.div`
 
 const Social = styled.a`
   display: grid;
-	width: 3rem;
-	img {
-		width: 100%;
-	}
+  width: 3rem;
+  img {
+    width: 100%;
+  }
 `;
 
 export function Socials() {
@@ -22,6 +22,9 @@ export function Socials() {
       </Social>
       <Social href="https://github.com/jose13162" target="_blank">
         <img src={"/svg/github.svg"} alt="Github icon" />
+      </Social>
+      <Social href="https://linkedin.com/in/jose13162" target="_blank">
+        <img src={"/svg/linkedin.svg"} alt="Linkedin icon" />
       </Social>
     </StyledSocials>
   );
