@@ -5,6 +5,7 @@ import chronometerProjectImage from "../../public/img/chronometer-project.png";
 import themedAppProjectImage from "../../public/img/themed-app-project.png";
 import urlShortenerProjectImage from "../../public/img/url-shortener-project.jpeg";
 import reactBlogProjectImage from "../../public/img/blog-project.jpeg";
+import calculatorProjectImage from "../../public/img/calculator-project.png";
 
 const GITHUB_PROFILE_URL = "https://github.com/jose13162/".replace(/\/$/, "");
 
@@ -19,7 +20,7 @@ export const projects: Project[] = [
     },
   }),
   new Project({
-    title: "Todo's",
+    title: "Todo Manager",
     description:
       "Site de gerenciamento de tarefas feito com Typescript. Express no Backend e Vue + Nuxt no Frontend. Estilizado com SCSS.",
     link: `${GITHUB_PROFILE_URL}/todo-app`,
@@ -29,7 +30,8 @@ export const projects: Project[] = [
   }),
   new Project({
     title: "Chronometer",
-    description: "Cronômetro simples feito com Typescript e React + Vite. Estilizado com CSS puro.",
+    description:
+      "Cronômetro simples feito com Typescript e React + Vite. Estilizado com CSS puro.",
     link: `${GITHUB_PROFILE_URL}/chronometer`,
     cover: {
       url: chronometerProjectImage,
@@ -60,6 +62,15 @@ export const projects: Project[] = [
     link: `${GITHUB_PROFILE_URL}/url-shortener`,
     cover: {
       url: urlShortenerProjectImage,
+    },
+  }),
+  new Project({
+    title: "Calculadora",
+    description:
+      "Calculadora feita com Typescript e React + Vite. Estilizada com CSS puro.",
+    link: `${GITHUB_PROFILE_URL}/calculator`,
+    cover: {
+      url: calculatorProjectImage,
     },
   }),
 ];
