@@ -1,75 +1,45 @@
-import styled from "styled-components";
+import { Box, Button } from "@mui/material";
+import { ResponsiveContainer } from "./ResponsiveContainer";
 
-const Nav = styled.nav`
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: end;
-`;
+type NavigationLinkProps = {
+  to: string;
+  text: string;
+};
 
-const NavItem = styled.li`
-  height: 2.25rem;
-  a {
-    height: 100%;
-    padding: 0 1rem;
-    color: #eeeeee;
-    text-decoration: none;
-    font-size: 1rem;
-    display: grid;
-    place-content: center;
-    transition: all 0.15s linear;
-    &:hover {
-      color: #dbdbdb;
-    }
-
-		border-radius: 0.25rem;
-		border: 1px solid #3b3951;
-  }
-
-  &.highlighted {
-    a {
-      background: #3b3951;
-      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-    }
-  }
-`;
-
-const NavItems = styled.ul`
-  width: max-content;
-  height: max-content;
-  display: grid;
-  grid-auto-columns: max-content;
-  grid-auto-flow: column;
-  gap: 0.5rem;
-
-  @media (max-width: 768px) {
-    ${NavItem} {
-      a {
-        justify-content: start;
-      }
-    }
-
-    justify-items: end;
-    grid-auto-flow: row;
-  }
-`;
+export function NavigationLink(props: NavigationLinkProps) {
+  return (
+    <a href={props.to} style={{ width: "100%", height: "100%" }}>
+      <Button
+        color="primary"
+        className="w-max"
+        variant="outlined"
+        sx={{
+          textTransform: "none",
+        }}
+      >
+        {props.text}
+      </Button>
+    </a>
+  );
+}
 
 export function Navigation() {
   return (
-    <Nav>
-      <NavItems>
-        <NavItem>
-          <a href="#about-me">Sobre mim</a>
-        </NavItem>
-        <NavItem>
-          <a href="#projects">Projetos</a>
-        </NavItem>
-        <NavItem>
-          <a href="#skills">Habilidades</a>
-        </NavItem>
-        <NavItem className="highlighted">
-          <a href="#contact">Contato</a>
-        </NavItem>
-      </NavItems>
-    </Nav>
+    <Box component="nav" className="w-screen py-4 grid place-items-center">
+      <ResponsiveContainer component="ul" className="flex flex-wrap gap-2">
+        <li className="inline-block">
+          <NavigationLink text="Sobre mim" to="#sobre-mim" />
+        </li>
+        <li className="inline-block">
+          <NavigationLink text="Projetos" to="#projetos" />
+        </li>
+        <li className="inline-block">
+          <NavigationLink text="Habilidades" to="#habilidades" />
+        </li>
+        <li className="inline-block">
+          <NavigationLink text="Contato" to="#contato" />
+        </li>
+      </ResponsiveContainer>
+    </Box>
   );
 }

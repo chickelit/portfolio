@@ -1,156 +1,74 @@
-import styled from "styled-components";
-import { Container } from "./Container";
+import { ResponsiveContainer } from "./ResponsiveContainer";
+import { Box, Typography, useTheme } from "@mui/material";
 
-const Section = styled.section`
-  padding: 8rem 1rem;
-`;
+interface SkillProps {
+  text: string;
+}
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr;
-  gap: 3rem;
-`;
+export function Skill(props: SkillProps) {
+  const theme = useTheme();
 
-const Title = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  height: 3.5rem;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #18181e;
-  }
-
-  h4 {
-    background: #eee;
-    padding: 0 2rem;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 2.25rem;
-    text-align: center;
-  }
-
-  @keyframes come {
-    0% {
-      transform: translateX(0);
-    }
-
-    50% {
-      transform: translateX(1rem);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes go {
-    0% {
-      transform: translateX(0);
-    }
-
-    50% {
-      transform: translateX(-1rem);
-    }
-
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    &:before {
-      content: "";
-      position: absolute;
-      width: 33vw;
-      height: 2px;
-      left: 0;
-      top: 0;
-      transform: translateY(0);
-      background: #18181e;
-      animation: come 3s infinite;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 33vw;
-      height: 2px;
-      right: 0;
-      bottom: 0;
-      background: #18181e;
-      animation: go 3s infinite;
-    }
-  }
-`;
-
-const SkillList = styled.div`
-  width: 100%;
-  overflow-wrap: break-word;
-  text-align: center;
-`;
-
-const Skill = styled.div`
-  border: 3px solid #eee;
-  box-shadow: 0 0 0 2px #ff7f50;
-  margin: 0.5rem;
-  width: max-content;
-  height: 2rem;
-  display: inline-block;
-  padding: 0 1rem;
-  background: #375c86;
-  border-radius: 1.4375rem;
-  line-height: 2rem;
-  color: #eeeeee;
-`;
+  return (
+    <Box className="inline-block p-1.5">
+      <Box
+        className="relative w-max h-10 px-4 grid place-items-center rounded-[20px]"
+        sx={{
+          border: `2px solid ${theme.palette.primary.main}`,
+          "&::after": {
+            margin: "3px",
+            borderRadius: "inherit",
+            zIndex: -1,
+            content: '""',
+            position: "absolute",
+            inset: 0,
+            bgcolor: "primary.main",
+            opacity: 0.3,
+          },
+        }}
+      >
+        <Typography fontWeight={500}>{props.text}</Typography>
+      </Box>
+    </Box>
+  );
+}
 
 export function Skills() {
   return (
-    <Container>
-      <Section id="skills">
-        <Grid>
-          <Title>
-            <h4>Habilidades</h4>
-          </Title>
-          <SkillList>
-            <Skill>HTML5</Skill>
-            <Skill>CSS3</Skill>
-            <Skill>Javascript</Skill>
-            <Skill>ES6+</Skill>
-            <Skill>Typescript</Skill>
-            <Skill>NodeJS</Skill>
-            <Skill>SCSS</Skill>
+    <Box component="section" id="habilidades">
+      <Box className="grid grid-rows-[max-content_1fr] gap-12 place-items-center">
+        <Box sx={{ bgcolor: "primary.main" }} className="h-36 w-screen grid place-items-center">
+          <Typography component="h2" variant="h4">
+            Habilidades
+          </Typography>
+        </Box>
+        <ResponsiveContainer className="max-w-xl">
+          <Box className="w-full wrap-break-word text-center">
+            <Skill text="HTML5" />
+            <Skill text="CSS3" />
+            <Skill text="Javascript" />
+            <Skill text="ES6+" />
+            <Skill text="Git" />
+            
+						<Skill text="Typescript" />
+            <Skill text="NodeJS" />
 
-            <Skill>Vue</Skill>
-            <Skill>Nuxt</Skill>
-            <Skill>Vite</Skill>
-            <Skill>React</Skill>
-            <Skill>Styled Components</Skill>
-            <Skill>Stitches</Skill>
+            <Skill text="Vite" />
+            <Skill text="React" />
+            <Skill text="Tailwind" />
+            
+						<Skill text="Express" />
+            <Skill text="MySQL" />
+            <Skill text="PostgreSQL" />
+            <Skill text="Websocket" />
 
-            <Skill>Express</Skill>
-            <Skill>Sequelize</Skill>
-            <Skill>AdonisJS</Skill>
-            <Skill>Japa</Skill>
-            <Skill>MySQL</Skill>
-            <Skill>Docker</Skill>
+            <Skill text="Jest" />
 
-            <Skill>C#</Skill>
-            <Skill>DotNet</Skill>
-            <Skill>AspNet Core</Skill>
-            <Skill>Entity Framework Core</Skill>
-          </SkillList>
-        </Grid>
-      </Section>
-    </Container>
+            <Skill text="Postman" />
+            <Skill text="Docker" />
+            <Skill text="Github Actions" />
+          </Box>
+        </ResponsiveContainer>
+      </Box>
+    </Box>
   );
 }

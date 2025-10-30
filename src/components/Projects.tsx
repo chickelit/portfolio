@@ -1,145 +1,70 @@
-import styled from "styled-components";
-import { projects } from "../utils/projects";
-import { Container } from "./Container";
+import { Box, Link, Paper, Typography } from "@mui/material";
+import { projects } from "../variables/projects";
+import { ResponsiveContainer } from "./ResponsiveContainer";
+import type { Project } from "Src/builders/Project";
+import NorthEastIcon from "@mui/icons-material/NorthEast";
 
-const StyledSection = styled.section`
-  display: grid;
-  gap: 3rem;
-`;
+interface ProjectCardProps {
+  project: Project;
+}
 
-const Title = styled.h3`
-  display: grid;
-  place-content: center;
-  width: 100%;
-  /* position: fixed; */
-  height: 16rem;
-  background: #ff7f50;
-  color: #eeeeee;
-  font-size: 2.5rem;
-`;
-
-const ProjectList = styled.div`
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: max-content;
-  justify-content: center;
-  gap: 1rem;
-`;
-
-const Project = styled.div`
-  width: 100%;
-  box-sizing: border-box;
-  background: white;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: max-content 1fr;
-  align-items: center;
-  gap: 5rem;
-
-  div.details {
-    width: 100%;
-    height: 100%;
-    max-width: 32rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content max-content;
-    align-content: space-between;
-
-    a {
-      color: #375c86;
-      transition: all 0.15s linear;
-      text-decoration: none;
-
-      &:hover {
-        color: #3e6897;
-      }
-    }
-
-    p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      word-break: break-all;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
-  }
-
-  div.cover {
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 4px #ff7f50;
-    width: 12rem;
-    aspect-ratio: 1 / 1;
-    display: grid;
-
-    img {
-      border-radius: 50%;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
-  }
-
-  @media (max-width: 648px) {
-		padding: 1.5rem;
-    gap: 2rem;
-
-    div.cover {
-      width: 8rem;
-    }
-
-		div.details p {
-			-webkit-line-clamp: 3;
-		}
-  }
-`;
+export function ProjectCard({ project }: ProjectCardProps) {
+  return (
+    <Paper className="p-6 max-w-3xl grid grid-flow-row place-items-center sm:grid-flow-col sm:grid-cols-[max-content_1fr] sm:place-items-stretch gap-8">
+      <img src={project.cover.url} alt={project.title} className="w-36 aspect-square object-cover rounded-lg" />
+      <Box className="grid grid-rows-[max-content_1fr_max-content]">
+        <Typography component="h3" variant="h6">
+          {project.title}
+        </Typography>
+        <Typography color="textSecondary" gutterBottom>
+          {project.description}
+        </Typography>
+        <Box className="grid grid-flow-col auto-cols-max gap-6">
+          <Link
+            href={project.repo}
+            underline="none"
+            color={project.repo ? "info" : "textSecondary"}
+            target="_blank"
+            className={`cursor-pointer w-max grid grid-flow-col place-items-center gap-1.5 transition-all ease-linear duration-150 hover:opacity-75 ${
+              project.repo ? "" : "opacity-30 pointer-events-none"
+            }`}
+          >
+            Ver repositório
+          </Link>
+          <Link
+            href={project.link}
+            underline="none"
+            color={project.link ? "secondary" : "textSecondary"}
+            target="_blank"
+            className={`cursor-pointer w-max grid grid-flow-col place-items-center gap-1.5 transition-all ease-linear duration-150 hover:opacity-75 ${
+              project.link ? "" : "opacity-30 pointer-events-none"
+            }`}
+          >
+            Ver projeto <NorthEastIcon fontSize="small" />
+          </Link>
+        </Box>
+      </Box>
+    </Paper>
+  );
+}
 
 export function Projects() {
-  const generateKey = (function () {
-    let id = 0;
-
-    return function () {
-      return ++id;
-    };
-  })();
-
   return (
-    <StyledSection id="projects">
-      <Title>Projetos</Title>
-      <Container>
-        <ProjectList>
-          {projects.map((project) => {
-            return (
-              <Project key={generateKey()}>
-                <div className="cover">
-                  <img src={project.cover.url} alt={project.title} />
-                </div>
-                <div className="details">
-                  <h2>{project.title}</h2>
-                  <p>{project.description}</p>
-                  <a href={project.link} target="_blank" className="view-more">
-                    Ver mais...
-                  </a>
-                </div>
-              </Project>
-            );
-          })}
-        </ProjectList>
-      </Container>
-    </StyledSection>
+    <Box component="section" id="projetos">
+      <Box className="grid grid-rows-[max-content_1fr] gap-12 place-items-center">
+        <Box sx={{ bgcolor: "primary.main" }} className="h-36 w-screen grid place-items-center">
+          <Typography component="h2" variant="h4">
+            Projetos
+          </Typography>
+        </Box>
+        <ResponsiveContainer>
+          <Box className="grid grid-flow-row place-items-center gap-4">
+            {projects.map((project) => {
+              return <ProjectCard project={project} key={project.title} />;
+            })}
+          </Box>
+        </ResponsiveContainer>
+      </Box>
+    </Box>
   );
 }

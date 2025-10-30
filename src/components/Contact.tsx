@@ -1,22 +1,22 @@
-import styled from "styled-components";
-
-const Footer = styled.footer`
-  background: #18181e;
-  color: #eeeeee;
-  height: 8rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content max-content;
-  align-content: center;
-  justify-items: center;
-  gap: 1rem;
-`;
+import { Link } from "react-router-dom";
+import { Paper, Typography } from "@mui/material";
+import { EMAIL } from "Src/variables";
 
 export function Contact() {
   return (
-    <Footer id="contact">
-      <h2>Contato</h2>
-      <p>anselmojose297@gmail.com</p>
-    </Footer>
+    <Paper
+      id="contato"
+      component="footer"
+      className="w-screen h-32 grid grid-cols-1 auto-rows-max content-center justify-items-center gap-4"
+    >
+      <Typography component="h2" variant="h5">
+        Contato
+      </Typography>
+      <Link to={`mailto:${EMAIL}`}>
+        <Typography color="textSecondary" className="hover:underline">
+          {EMAIL}
+        </Typography>
+      </Link>
+    </Paper>
   );
 }

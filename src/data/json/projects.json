@@ -1,0 +1,30 @@
+[
+	{
+		"title": "Orça",
+		"description": "Sistema de gerenciamento de finanças pessoais em fase de desenvolvimento utilizando Typescript, React, Express e TypeORM.",
+		"link": "https://orca-financas.com",
+		"cover": {
+			"url": "/img/orca.png"
+		},
+		"repo": "orca-frontend",
+		"year": 2025
+	},
+	{
+		"title": "Maratona Explorer 2",
+		"description": "Site de compartilhamento de redes sociais desenvolvido durante um pequeno curso da Rocketseat. Feito com Typescript, React e Stitches.",
+		"cover": {
+			"url": "/img/maratona-explorer-2.png"
+		},
+		"repo": "maratona-explorer-2-rocketseat",
+		"year": 2022
+	},
+	{
+		"title": "Blog",
+		"description": "Home page para um blog feito com Typescript, React e Stitches utilizando um design grátis encontrado no Figma.",
+		"cover": {
+			"url": "/img/react-blog.jpeg"
+		},
+		"repo": "react-blog",
+		"year": 2022
+	}
+]
