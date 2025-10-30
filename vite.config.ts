@@ -7,10 +7,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), tailwindcss()],
 	  server: {
-    allowedHosts: ["devjose.portfolio.com.br"],
+    allowedHosts: ["devjose-portfolio.com.br"],
   },
   preview: {
-    allowedHosts: ["devjose.portfolio.com.br"],
+    allowedHosts: ["devjose-portfolio.com.br"],
     host: "0.0.0.0",
   },
 });
