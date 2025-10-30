@@ -28,9 +28,6 @@ export function Navigation() {
     <Box component="nav" className="w-screen py-4 grid place-items-center">
       <ResponsiveContainer component="ul" className="flex flex-wrap gap-2">
         <li className="inline-block">
-          <NavigationLink text="Sobre mim" to="#sobre-mim" />
-        </li>
-        <li className="inline-block">
           <NavigationLink text="Projetos" to="#projetos" />
         </li>
         <li className="inline-block">
