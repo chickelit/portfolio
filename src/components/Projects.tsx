@@ -13,9 +13,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Paper className="p-6 max-w-3xl grid grid-flow-row place-items-center sm:grid-flow-col sm:grid-cols-[max-content_1fr] sm:place-items-stretch gap-8">
       <img src={project.cover.url} alt={project.title} className="w-36 aspect-square object-cover rounded-lg" />
       <Box className="grid grid-rows-[max-content_1fr_max-content]">
-        <Typography component="h3" variant="h6">
-          {project.title}
-        </Typography>
+        <Box className="grid grid-flow-col auto-cols-max justify-between items-center">
+          <Typography component="h3" variant="h6">
+            {project.title}
+          </Typography>
+          <Typography component="h3" variant="h6" fontSize={14} color="textSecondary">
+            {project.year}
+          </Typography>
+        </Box>
         <Typography color="textSecondary" gutterBottom>
           {project.description}
         </Typography>
