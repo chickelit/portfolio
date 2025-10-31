@@ -48,15 +48,15 @@ export function Skills() {
             <Skill text="Javascript" />
             <Skill text="ES6+" />
             <Skill text="Git" />
-            
-						<Skill text="Typescript" />
+
+            <Skill text="Typescript" />
             <Skill text="NodeJS" />
 
             <Skill text="Vite" />
             <Skill text="React" />
             <Skill text="Tailwind" />
-            
-						<Skill text="Express" />
+
+            <Skill text="Express" />
             <Skill text="MySQL" />
             <Skill text="PostgreSQL" />
             <Skill text="Websocket" />
@@ -66,6 +66,9 @@ export function Skills() {
             <Skill text="Postman" />
             <Skill text="Docker" />
             <Skill text="Github Actions" />
+            <Skill text="Hostinger" />
+            <Skill text="VPS" />
+            <Skill text="Openlitespeed" />
           </Box>
         </ResponsiveContainer>
       </Box>

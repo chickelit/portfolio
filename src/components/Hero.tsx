@@ -7,7 +7,7 @@ export function Hero() {
   const theme = useTheme();
 
   return (
-    <Box className="relative h-screen grid grid-rows-[max-content_1fr] place-items-center">
+    <Box className="relative h-dvh grid grid-rows-[max-content_1fr] place-items-center">
       <Navigation />
       <Box className="absolute w-full top-1/2 -translate-y-1/2 grid place-items-center">
         <Presentation />

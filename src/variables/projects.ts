@@ -8,7 +8,7 @@ export const projects: Project[] = jsonData.map((project) => {
     .setDescription(project.description)
     .setLink(project.link)
     .setCover(project.cover)
-    .setRepo(`${GITHUB_PROFILE_URL.replace(/\/$/, "")}/${project.repo}`)
+    .setRepo(project.repo ? `${GITHUB_PROFILE_URL.replace(/\/$/, "")}/${project.repo}` : undefined)
     .setYear(project.year)
     .build();
 });
