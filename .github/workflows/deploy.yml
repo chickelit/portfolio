@@ -36,5 +36,7 @@ jobs:
             cd ${{secrets.REMOTE_WORK_DIR}}
             git fetch origin
             git reset --hard origin/master
+            git checkout master
+            git pull
             npm run docker:deploy
           debug: true
