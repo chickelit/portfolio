@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Orça",
+		"title": "Orça Finanças",
 		"description": "Sistema de gerenciamento de finanças pessoais em fase de testes utilizando Typescript, React, Express, TypeORM e Jest.",
 		"link": "https://orca-financas.com",
 		"cover": {
